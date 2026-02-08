@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests (placeholder)
-        run: echo "No tests yet"
+      - name: Dependency vulnerability check
+        run: npm audit --audit-level=high
 
       - name: Deploy to Linux Server
         uses: appleboy/ssh-action@v1
